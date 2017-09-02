@@ -7,21 +7,30 @@
 
 
     body {
-        background: #FFCCCC;
+        /*background: #FFCCCC;*/
+        background: url(../image/bg.jpg) no-repeat center center fixed;
+        background-size: cover;
         /*color:*/
     }
 
     .container {
         max-width:900px;
-        margin: 0 auto;
+        margin: 160px auto;
         position: relative;
         padding: 0 10px;
     }
     
     h1
     {
+        font-weight: normal;
+        background: #FFFFCC;
+        border-radius: 4px;
+        opacity: 0.8;
         text-align: center;
+        color: #333333;
+        font-family:Arial,Helvetica,sans-serif;
     }
+
 
     .task-list
     {
@@ -69,6 +78,7 @@
         margin-right: 1%;
     }
 
+
     [type=submit] {
         background:#FFFFCC;
     }
@@ -95,6 +105,22 @@
     {
         background: #ddd;
     }
+
+    .task-item.completed {
+        color: #aaa;
+        opacity: 0.6;
+    }
+
+    .task-item.completed:after {
+        content:" ";
+        height: 1px;
+        background: #aaa;
+        width: 97%;
+        position: relative;
+        top: -8px;
+        display: block;
+        float: right;
+    }
     
     input[type=text]:hover,
     input[type=date]:hover,
@@ -112,7 +138,8 @@
 
     .task-detail
     {
-        background: #fff;
+        background: #c5d5ec;
+        overflow: auto;
         padding: 10px;
         width: 50%;
         height: 100%;
@@ -158,4 +185,23 @@
         margin-left: 10px;
     }
 
-    .inpu
+    .msg {
+        display: none;
+        text-align: center;
+        background: #FFFFCC;
+        padding:10px;
+        color: #333;
+    }
+
+    .anchor
+    {
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px;
+
+    }
+
+    .alert {
+        width: 0;
+        height: 0;
+    }
