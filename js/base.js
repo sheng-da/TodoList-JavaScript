@@ -22,10 +22,10 @@
 
         init();
 
-
         $form_add_task.on('submit',on_add_task_form_submit);
         $task_detail_mask.on('click',hide_task_detail);
 
+        /* Rewrite the pop out alert */
         function myAlert(arg){
             if (!arg) {
                 console.error('arg is required.');
@@ -65,7 +65,6 @@
                     'border-radius': 3,
                     'box-shadow': '0 1px 2px rgba(0,0,0, 0.5)',
                 });
-
 
             $mask= $('<div></div>')
                 .css({
@@ -142,16 +141,13 @@
                 adjust_box_position();
             });
 
-
-
             $mask.appendTo($body);
             $box.appendTo($body);
             $window.resize();
             return deferred.promise();
         }
 
-
-
+        /* Listen to confirm event for notify */
         function notify_confirm_listener() {
             $msg_confirm.on('click', function () {
                 hide_notify();
@@ -163,7 +159,6 @@
             /* update local storage*/
             store.set('task_list',task_list);
             render_task_list();
-
         }
 
         function on_add_task_form_submit(e){
@@ -181,6 +176,7 @@
                 }
         }
 
+        /* Listen to click event for task detail */
         function task_detail_listener() {
             $task_detail_trigger.on('click', function () {
                 var $this = $(this);
@@ -234,7 +230,6 @@
             $task_detail.html(tpl);
             $('.datetime').datetimepicker();
 
-
             $update_form = $task_detail.find('form');
             $task_detail_content = $update_form.find('.content');
             $task_detail_content_input = $update_form.find('[name=content]');
@@ -242,7 +237,6 @@
                 $task_detail_content_input.show();
                 $task_detail_content.hide();
             });
-
 
             $update_form.on('submit', function(e) {
                 e.preventDefault();
@@ -263,12 +257,9 @@
                 var is_complete = $this.is(':checked');
                 var index = $this.parent().parent().data('index');
                 var item = get_task_item(index);
-                if (item.complete)
-                {
+                if (item.complete) {
                     update_task(index, {complete: false});
-                }
-                else
-                {
+                } else {
                     update_task(index, {complete: true});
                 }
             })
@@ -348,8 +339,6 @@
         function hide_notify() {
             $msg.hide();
         }
-
-
 
         function render_task_item(data, index) {
             if (!data || !index) return;

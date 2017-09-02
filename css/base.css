@@ -7,10 +7,8 @@
 
 
     body {
-        /*background: #FFCCCC;*/
         background: url(../image/bg.jpg) no-repeat center center fixed;
         background-size: cover;
-        /*color:*/
     }
 
     .container {
@@ -20,8 +18,7 @@
         padding: 0 10px;
     }
     
-    h1
-    {
+    h1 {
         font-weight: normal;
         background: #FFFFCC;
         border-radius: 4px;
@@ -32,8 +29,7 @@
     }
 
 
-    .task-list
-    {
+    .task-list {
         margin: 5px 0;
     }
 
@@ -42,8 +38,7 @@
     button,
     .task-detail-mask,
     textarea,
-    .task-detail
-    {
+    .task-detail {
         padding:  10px;
         border-radius: 4px;
     }
@@ -55,24 +50,22 @@
     }
 
 
-    input[type=text], input[type=date]
-    {
+    input[type=text],
+    input[type=date] {
         border: 0;
         display: block;
         width: 100%;
         background:#eeeeee;
     }
 
-    button
-    {
+    button {
         display: inline-block;
         border: 0;
         background: #FFFFCC;
         cursor: pointer;
     }
 
-    .add-task input[type=text]
-    {
+    .add-task input[type=text] {
         float: left;
         width: 89%;
         margin-right: 1%;
@@ -88,21 +81,19 @@
     }
 
 
-    .task-item
-    {
+    .task-item {
         padding:10px;
         background: #FFFFCC;
         color: #333;
         margin-bottom: 4px;
     }
 
-    .task-item, .add-task input[type=text]
-    {
+    .task-item,
+    .add-task input[type=text] {
         box-shadow: 0 3px 5px rgba(0,0,0 .5);
     }
     
-    .task-item:hover
-    {
+    .task-item:hover {
         background: #ddd;
     }
 
@@ -127,7 +118,7 @@
     input[type=text]:focus,
     input[type=date]:focus,
     textarea:hover,
-    textarea:focus{
+    textarea:focus {
         background: #ffffff;
     }
 
@@ -136,8 +127,7 @@
         display: none;
     }
 
-    .task-detail
-    {
+    .task-detail {
         background: #c5d5ec;
         overflow: auto;
         padding: 10px;
@@ -158,8 +148,7 @@
         margin-bottom: 10px;
     }
 
-    .task-detail-mask
-    {
+    .task-detail-mask {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -193,8 +182,7 @@
         color: #333;
     }
 
-    .anchor
-    {
+    .anchor {
         font-weight: bold;
         cursor: pointer;
         padding: 10px;
